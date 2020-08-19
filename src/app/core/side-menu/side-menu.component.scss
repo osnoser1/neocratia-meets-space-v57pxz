@@ -1,0 +1,11 @@
+.menu-style {
+  width: 300px;
+}
+.menu-button {
+  cursor: pointer;
+}
+.menu-button:hover {
+  margin: 4px 2px;
+  padding: 8px 16px;
+  transition: 0.3s;
+}

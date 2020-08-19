@@ -1,0 +1,28 @@
+<div id="why" class="docs-homepage-promo">
+  <div class="header-headline">
+    <h1 class="mat-h1">Meet the team</h1>
+    <p>Who is fixing the system 💪</p>
+  </div>
+  <div class="box">
+    <div *ngFor="let member of teamMembers">
+      <mat-card class="team-card">
+        <mat-card-header class="card-header">
+          <img mat-card-md-image src="{{ member.photo }}" />
+          <mat-card-title>{{ member.name }}</mat-card-title>
+          <mat-card-subtitle
+            ><a href="{{ member.twitterUrl }}">{{ member.twitter }}</a></mat-card-subtitle
+          >
+        </mat-card-header>
+        <mat-card-content class="card-content mt-24">
+          <p>
+            {{ member.description }}
+          </p>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button color="primary" (click)="goTo(member.bioUrl)">View More</button>
+          <button mat-button color="primary" (click)="goTo(member.bioUrl)">Bio</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,10 @@
+<app-navbar (togleMenu)="sideMenu.toggle()"></app-navbar>
+<mat-drawer-container class="bg-light full-height">
+  <mat-drawer #sideMenu mode="over">
+    <app-side-menu (itemPressed)="sideMenu.toggle()"></app-side-menu>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </mat-drawer-content>
+</mat-drawer-container>

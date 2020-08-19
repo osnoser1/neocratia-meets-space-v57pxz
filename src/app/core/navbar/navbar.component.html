@@ -1,0 +1,43 @@
+<mat-toolbar class="nav-bar">
+	<button mat-icon-button color="primary" (click)="onClick()">
+    <mat-icon class="mat-18">menu</mat-icon>
+  </button>
+  <a mat-button class="docs-button" href="/#home" aria-label="neocratia">
+    <img class="navbar-logo" src="https://firebasestorage.googleapis.com/v0/b/neocratia-website.appspot.com/o/space-assets%2Flogo.png?alt=media&token=0bf78b11-e798-4788-960d-a6f6230d3fe2" alt="neocratia" />
+  </a>
+  <a
+    mat-button
+    class="docs-navbar-hide-small docs-button hide-mobile"
+    *ngFor="let nav of navItems"
+    href="/{{ nav.link }}"
+    >{{ nav.name }}</a
+  >
+  <div class="flex-spacer"></div>
+  <a
+    mat-icon-button
+    class="docs-button docs-navbar-show-small"
+    href="https://blog.neocratia.org/"
+    target="_blank"
+    aria-label="Medium Blog"
+  >
+    <img class="icon-logos" src="https://firebasestorage.googleapis.com/v0/b/neocratia-website.appspot.com/o/space-assets%2Fmedium_icon.png?alt=media&token=2b7300a9-175e-4b7b-afd0-7e1a41ccb815" alt="neocratia" />
+  </a>
+  <a
+    mat-icon-button
+    class="docs-button docs-navbar-show-small"
+    href="https://github.com/neocratia"
+    target="_blank"
+    aria-label="GitHub Repository"
+  >
+    <img class="icon-logos" src="https://firebasestorage.googleapis.com/v0/b/neocratia-website.appspot.com/o/space-assets%2FGitHub-Mark-32px.png?alt=media&token=b10cfacf-387f-4f9b-bd50-e7d9937d64c7" alt="neocratia" />
+  </a>
+</mat-toolbar>
+<mat-toolbar-row style="margin-top: 50px;" class="show-mobile">
+  <a
+    mat-button
+    class="docs-navbar-hide-small docs-button"
+    *ngFor="let nav of navItems"
+    href="/{{ nav.link }}"
+    >{{ nav.name }}</a
+  >
+</mat-toolbar-row>
