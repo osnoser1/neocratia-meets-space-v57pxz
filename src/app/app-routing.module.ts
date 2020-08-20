@@ -1,12 +1,11 @@
 import { DOCUMENT, ViewportScroller } from '@angular/common';
-import { Inject, NgModule } from '@angular/core';
+import { Inject, NgModule, PLATFORM_ID } from '@angular/core';
 import { Event, Router, RouterModule, Routes, Scroll } from '@angular/router';
 
 import { filter } from 'rxjs/operators';
 
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsComponent } from './pages/products/products.component';
-import { RoutingRedirectGuard } from './core/routing-redirect.guard';
 import { TeamComponent } from './pages/team/team.component';
 
 const routes: Routes = [
@@ -23,6 +22,7 @@ const routes: Routes = [
 export class AppRoutingModule {
   constructor(
     @Inject(DOCUMENT) document: Document,
+    @Inject(PLATFORM_ID) platformId: object,
     router: Router,
     viewportScroller: ViewportScroller,
   ) {
@@ -39,7 +39,9 @@ export class AppRoutingModule {
         }
       } else {
         // forward navigation
-        viewportScroller.scrollToPosition([0, 0]);
+        // TODO: ViewportScroller.scrollToPosition method have problems with sidenav
+        // viewportScroller.scrollToPosition([0, 0]);
+        document.getElementsByTagName('mat-drawer-content')[0].scrollTo(0, 0);
       }
     });
   }
