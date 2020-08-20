@@ -11,15 +11,18 @@ export class NavbarComponent {
   navItems = [
     {
       name: 'WHY',
-      link: '#why',
+      link: '',
+      fragment: 'why',
     },
     {
       name: 'HOW',
-      link: '#how',
+      link: '',
+      fragment: 'how',
     },
     {
       name: 'WHAT',
-      link: '#what',
+      link: '',
+      fragment: 'what',
     },
   ];
 

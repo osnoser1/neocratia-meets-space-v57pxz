@@ -13,7 +13,6 @@ import { RoutingRedirectGuard } from './core/routing-redirect.guard';
   declarations: [AppComponent],
   imports: [
     AppRoutingModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
     BrowserModule,
     CoreModule,

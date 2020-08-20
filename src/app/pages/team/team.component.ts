@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
 
+import { DEFAULT_IMG_SRC } from 'src/app/core/constants/lazysizes.const';
+
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
 })
 export class TeamComponent {
+  defaultImgSrc = DEFAULT_IMG_SRC;
   teamMembers = [
     {
       name: 'Alexander Torrenegra',
@@ -66,8 +69,4 @@ export class TeamComponent {
       photo: 'https://www.neocratia.org/_nuxt/img/nicolas-bw.579fb49.jpg',
     },
   ];
-
-  goTo(url: string) {
-    window.open(url);
-  }
 }
