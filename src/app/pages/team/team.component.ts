@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { DEFAULT_IMG_SRC } from 'src/app/core/constants/lazysizes.const';
 
@@ -6,6 +6,7 @@ import { DEFAULT_IMG_SRC } from 'src/app/core/constants/lazysizes.const';
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TeamComponent {
   defaultImgSrc = DEFAULT_IMG_SRC;

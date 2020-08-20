@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, OnInit, Output } from '@angular/core';
 export interface MenuItem {
   title: string;
   link: string;
@@ -9,6 +9,7 @@ export interface MenuItem {
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
   styleUrls: ['./side-menu.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SideMenuComponent implements OnInit {
   @Output() itemPressed = new EventEmitter();
