@@ -28,7 +28,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {}
 
   onClick() {
-    console.log('Menú presionado');
     this.togleMenu.emit();
   }
 }
