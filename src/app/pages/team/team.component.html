@@ -6,7 +6,15 @@
   <div class="box">
     <mat-card *ngFor="let member of teamMembers" class="team-card">
       <mat-card-header class="card-header">
-        <img mat-card-md-image src="{{ member.photo }}" />
+        <picture mat-card-md-image>
+          <img
+            class="lazyload"
+            [attr.data-src]="member.photo"
+            alt="Team member image"
+            [src]="defaultImgSrc"
+            width="112"
+            height="112"
+        /></picture>
         <mat-card-title>{{ member.name }}</mat-card-title>
         <mat-card-subtitle
           ><a href="{{ member.twitterUrl }}">{{ member.twitter }}</a></mat-card-subtitle
