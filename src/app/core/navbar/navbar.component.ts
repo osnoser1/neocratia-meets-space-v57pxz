@@ -3,7 +3,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
   @Output() togleMenu = new EventEmitter();
@@ -11,16 +11,16 @@ export class NavbarComponent implements OnInit {
   navItems = [
     {
       name: 'WHY',
-      link: '#why'
+      link: '#why',
     },
     {
       name: 'HOW',
-      link: '#how'
+      link: '#how',
     },
     {
       name: 'WHAT',
-      link: '#what'
-    }
+      link: '#what',
+    },
   ];
 
   constructor() {}

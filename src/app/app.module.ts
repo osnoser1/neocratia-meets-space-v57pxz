@@ -19,10 +19,10 @@ import { RoutingRedirectGuard } from './core/routing-redirect.guard';
     CoreModule,
     CoreModule,
     NgMaterialModule,
-    PagesModule
+    PagesModule,
   ],
   // entryComponents: [RoutingRedirectGuard],
   providers: [RoutingRedirectGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {}

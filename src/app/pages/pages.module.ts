@@ -9,6 +9,6 @@ import { NgMaterialModule } from '../core/ng-material.module';
 @NgModule({
   imports: [CommonModule, PagesRoutingModule, NgMaterialModule],
   declarations: [HomeComponent, TeamComponent, ProductsComponent],
-  exports: [ProductsComponent, HomeComponent, TeamComponent, ProductsComponent]
+  exports: [ProductsComponent, HomeComponent, TeamComponent, ProductsComponent],
 })
 export class PagesModule {}

@@ -8,7 +8,7 @@ export interface MenuItem {
 @Component({
   selector: 'app-side-menu',
   templateUrl: './side-menu.component.html',
-  styleUrls: ['./side-menu.component.scss']
+  styleUrls: ['./side-menu.component.scss'],
 })
 export class SideMenuComponent implements OnInit {
   @Output() itemPressed = new EventEmitter();
@@ -22,8 +22,8 @@ export class SideMenuComponent implements OnInit {
       {
         title: 'Meet the team',
         link: 'team',
-        icon: 'recent_actors'
-      }
+        icon: 'recent_actors',
+      },
       // {
       //   title: 'See our products',
       //   link: 'products',
@@ -40,13 +40,13 @@ export class SideMenuComponent implements OnInit {
       {
         title: 'Neocratium',
         link: 'https://neocratium-dev.firebaseapp.com/',
-        icon: 'touch_app'
+        icon: 'touch_app',
       },
       {
         title: 'Crowdfunding sites',
         link: 'https://techo-beta.vaki.co/',
-        icon: 'verified_user'
-      }
+        icon: 'verified_user',
+      },
     ];
   }
 }

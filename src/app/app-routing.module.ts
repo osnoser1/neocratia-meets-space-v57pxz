@@ -9,11 +9,11 @@ const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'team', component: TeamComponent },
   { path: 'products', component: ProductsComponent },
-  { path: '**', component: HomeComponent }
+  { path: '**', component: HomeComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}
