@@ -14,11 +14,11 @@ const matComponents = [
   MatListModule,
   MatSidenavModule,
   MatToolbarModule,
-  MatCardModule
+  MatCardModule,
 ];
 
 @NgModule({
   imports: [matComponents],
-  exports: [matComponents]
+  exports: [matComponents],
 })
 export class NgMaterialModule {}

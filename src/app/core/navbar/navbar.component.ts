@@ -1,34 +1,29 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
   @Output() togleMenu = new EventEmitter();
 
   navItems = [
     {
       name: 'WHY',
-      link: '#why'
+      link: '#why',
     },
     {
       name: 'HOW',
-      link: '#how'
+      link: '#how',
     },
     {
       name: 'WHAT',
-      link: '#what'
-    }
+      link: '#what',
+    },
   ];
 
-  constructor() {}
-
-  ngOnInit() {}
-
   onClick() {
-    console.log('Menú presionado');
     this.togleMenu.emit();
   }
 }
