@@ -18,8 +18,8 @@
         </p>
       </mat-card-content>
       <mat-card-actions align="end">
-        <button mat-button color="primary" (click)="goTo(member.bioUrl)">View More</button>
-        <button mat-button color="primary" (click)="goTo(member.bioUrl)">Bio</button>
+        <a mat-button color="primary" [href]="member.bioUrl">View More</a>
+        <a mat-button color="primary" [href]="member.bioUrl">Bio</a>
       </mat-card-actions>
     </mat-card>
   </div>

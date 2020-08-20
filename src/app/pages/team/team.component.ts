@@ -66,8 +66,4 @@ export class TeamComponent {
       photo: 'https://www.neocratia.org/_nuxt/img/nicolas-bw.579fb49.jpg',
     },
   ];
-
-  goTo(url: string) {
-    window.open(url);
-  }
 }
