@@ -1,11 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-team',
   templateUrl: './team.component.html',
   styleUrls: ['./team.component.scss'],
 })
-export class TeamComponent implements OnInit {
+export class TeamComponent {
   teamMembers = [
     {
       name: 'Alexander Torrenegra',
@@ -66,9 +66,6 @@ export class TeamComponent implements OnInit {
       photo: 'https://www.neocratia.org/_nuxt/img/nicolas-bw.579fb49.jpg',
     },
   ];
-  constructor() {}
-
-  ngOnInit() {}
 
   goTo(url: string) {
     window.open(url);

@@ -42,7 +42,7 @@
       }
     ],
     "no-console": true,
-    "no-empty": false,
+    "no-empty": true,
     "no-inferrable-types": [
       true,
       "ignore-params"

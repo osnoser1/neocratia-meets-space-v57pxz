@@ -15,8 +15,6 @@ export class SideMenuComponent implements OnInit {
   menuItems: MenuItem[];
   menuItems2: MenuItem[];
 
-  constructor() {}
-
   ngOnInit() {
     this.menuItems = [
       {
