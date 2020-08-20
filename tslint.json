@@ -41,6 +41,29 @@
         ]
       }
     ],
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "case-insensitive",
+        "grouped-imports": true,
+        "named-imports-order": "case-insensitive",
+        "module-source-path": "basename",
+        "groups": [
+          { "name": "angular", "match": "^@angular/.*", "order": 1 },
+          {
+            "name": "internal modules",
+            "match": "^../.*",
+            "order": 3
+          },
+          {
+            "name": "internal modules",
+            "match": "^./.*",
+            "order": 4
+          },
+          { "name": "node_modules", "match": ".*", "order": 2 }
+        ]
+      }
+    ],
     "no-console": true,
     "no-empty": true,
     "no-inferrable-types": [

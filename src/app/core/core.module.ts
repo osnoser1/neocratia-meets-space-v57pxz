@@ -1,10 +1,11 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NavbarComponent } from './navbar/navbar.component';
-import { SideMenuComponent } from './side-menu/side-menu.component';
-import { NgMaterialModule } from './ng-material.module';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
+
 import { FooterComponent } from './footer/footer.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { NgMaterialModule } from './ng-material.module';
+import { SideMenuComponent } from './side-menu/side-menu.component';
 
 @NgModule({
   imports: [CommonModule, NgMaterialModule, RouterModule],
