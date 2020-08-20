@@ -2,7 +2,7 @@
   <button mat-icon-button color="primary" (click)="onClick()">
     <mat-icon class="mat-18">menu</mat-icon>
   </button>
-  <a mat-button class="docs-button" href="/#home" aria-label="neocratia">
+  <a mat-button class="docs-button" routerLink="/" fragment="home" aria-label="neocratia">
     <img
       class="navbar-logo"
       src="https://firebasestorage.googleapis.com/v0/b/neocratia-website.appspot.com/o/space-assets%2Flogo.png?alt=media&token=0bf78b11-e798-4788-960d-a6f6230d3fe2"
@@ -10,10 +10,11 @@
     />
   </a>
   <a
+    *ngFor="let nav of navItems"
     mat-button
     class="docs-navbar-hide-small docs-button hide-mobile"
-    *ngFor="let nav of navItems"
-    href="/{{ nav.link }}"
+    [fragment]="nav.fragment"
+    [routerLink]="nav.link"
     >{{ nav.name }}</a
   >
   <div class="flex-spacer"></div>
@@ -46,10 +47,11 @@
 </mat-toolbar>
 <mat-toolbar-row style="margin-top: 50px;" class="show-mobile">
   <a
+    *ngFor="let nav of navItems"
     mat-button
     class="docs-navbar-hide-small docs-button"
-    *ngFor="let nav of navItems"
-    href="/{{ nav.link }}"
+    [fragment]="nav.fragment"
+    [routerLink]="nav.link"
     >{{ nav.name }}</a
   >
 </mat-toolbar-row>
